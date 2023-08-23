@@ -20,18 +20,19 @@ console.log (kmDaPercorrere);
 let userAge = Number(prompt("Quanti anni hai?"));
 console.log (userAge);
 
-// Il prezzo da scoprire del biglietto dipende dai km da percorsi * il prezzo standard del biglietto (0.21)
-let ticketPrice = kmDaPercorrere * 0.21;
+// Il prezzo da scoprire del biglietto dipende dai km da percorsi * il prezzo standard del biglietto (0.21) senza scontistiche
+let ticketPrice = (kmDaPercorrere * 0.21).toFixed(2);
 console.log(ticketPrice);
 
+// Scontistica convertita in valore decimale
 let Discount20 = ticketPrice / 100 * 20;
-let totDiscount20 = ticketPrice - Discount20
-
 let Discount40 = ticketPrice / 100 * 40;
+
+// Prezzo del biglietto con scontistiche 
+let totDiscount20 = (ticketPrice - Discount20).toFixed(2);
 let totDiscount40 = (ticketPrice - Discount40).toFixed(2);
 
-let totalPrice = (ticketPrice - Discount40).toFixed(2);
-
+// Verifico le condizioni in base all'età dei passeggeri
 if(userAge < 18) {
     console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount20);
 
