@@ -31,13 +31,11 @@ let Discount40 = ticketPrice / 100 * 40;
 let totalPrice; 
 
 if(userAge < 18) {
-    console.log(Discount20);
+    console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + Discount20);
 
 } else if(userAge > 65) {
-    console.log(Discount40);
+    console.log("Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di" + " " + Discount40);
 }
-
-
 
 
 
