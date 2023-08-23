@@ -28,9 +28,9 @@ let Discount20 = ticketPrice / 100 * 20;
 let totDiscount20 = ticketPrice - Discount20
 
 let Discount40 = ticketPrice / 100 * 40;
-let totDiscount40 = ticketPrice - Discount40
+let totDiscount40 = (ticketPrice - Discount40).toFixed(2);
 
-let totalPrice = ticketPrice - Discount40;
+let totalPrice = (ticketPrice - Discount40).toFixed(2);
 
 if(userAge < 18) {
     console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount20);
@@ -41,6 +41,11 @@ if(userAge < 18) {
 } else {
    console.log(ticketPrice);
 }
+
+
+
+
+
 
 
 
