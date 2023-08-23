@@ -25,17 +25,24 @@ let ticketPrice = kmDaPercorrere * 0.21;
 console.log(ticketPrice);
 
 let Discount20 = ticketPrice / 100 * 20;
+let totDiscount20 = ticketPrice - Discount20
 
 let Discount40 = ticketPrice / 100 * 40;
+let totDiscount40 = ticketPrice - Discount40
 
-let totalPrice; 
+let totalPrice = ticketPrice - Discount40;
 
 if(userAge < 18) {
-    console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + Discount20);
+    console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount20);
 
 } else if(userAge > 65) {
-    console.log("Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di" + " " + Discount40);
+    console.log("Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount40);
+
+} else {
+   console.log(ticketPrice);
 }
+
+
 
 
 
