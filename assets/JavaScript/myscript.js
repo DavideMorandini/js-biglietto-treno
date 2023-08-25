@@ -36,12 +36,23 @@ let totDiscount40 = (ticketPrice - Discount40).toFixed(2);
 if(userAge < 18) {
     console.log("Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount20);
 
+    document.querySelector("div").innerHTML = "Il tuo sconto è del 20%." + " " + "Il prezzo del biglietto è di €" + " " + totDiscount20;
+
 } else if(userAge > 65) {
-    console.log("Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di" + " " + totDiscount40);
+    console.log("Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di €" + " " + totDiscount40);
+
+    document.querySelector("div").innerHTML = "Il tuo sconto è del 40%." + " " + "Il prezzo del biglietto è di €" + " " + totDiscount40;
 
 } else {
    console.log(ticketPrice);
+
+   document.querySelector("div").innerHTML = "Spiacenti non hai nessuno sconto." + " " + "Il prezzo del biglietto è di €" + " " + ticketPrice;
 }
+
+
+
+
+
 
 
 
